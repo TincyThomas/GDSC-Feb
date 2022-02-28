@@ -1,0 +1,18 @@
+def fizz_buzz(inputarray, sum):
+    arr=[]
+    for i in inputarray:
+        for j in inputarray[1:]:
+            for k in inputarray[2:]:
+                for l in inputarray[3:]:
+                    if len({i, j, k, l})==4:
+                        if i + j + k + l == sum:
+                            if [i, j, k, l] in arr:
+                                continue
+                            else:
+                                arr += [[i, j, k, l]]
+                            continue
+                        else:
+                            continue
+
+    return arr
+print(fizz_buzz( [7,6,4,-1,1,2], 16))
